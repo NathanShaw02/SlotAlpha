@@ -14,8 +14,8 @@ int main(){
     
 
     bool cashout = false;
-
-    int credits = 30;
+    int startCredits = 30;
+    int credits = startCredits;
     int cost = 1;
     //tracking stats
     int nothing = 0;
@@ -61,11 +61,11 @@ int main(){
             cashout = true;
             std::cout<<"Final Credits: "<<credits<<"\n Your stats:\n"<<dye::red("0 Matches: ")<<nothing<<dye::yellow("   2 Match: ")<<match2<<dye::green("   3 Match: ")<<match3<<"\n";
 
-            if (credits > 10){
+            if (credits > startCredits){
 
-                std::cout<<(10-credits)<<" profit!";
+                std::cout<<(startCredits-credits)<<" profit!";
 
-            }else if ( credits > 0 && credits<10){
+            }else if ( credits > 0 && credits<startCredits){
 
                 std::cout<<credits<<" credits remain. Leaving the tables with something atleast hehe!";
 
