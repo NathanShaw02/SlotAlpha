@@ -38,14 +38,14 @@ int main(){
 
             if (( num1==num2) && (num2==num3)){
 
-                std::cout<<dye::green("\nMAXX WIN! 10x :D\n");
-                credits += (cost*10);
+                std::cout<<dye::green("\nMAXX WIN! 100x :D\n");
+                credits += (cost*100);
                 match3 += 1;
 
             }else if((num1==num2 && num2!=num3)||(num1!=num2 && num2==num3)){
 
-                std::cout<<dye::yellow("\nNice Match! 3x :)\n");
-                credits = credits+ cost*3;
+                std::cout<<dye::yellow("\nNice Match! 5x :)\n");
+                credits = credits+ cost*5;
                 match2 += 1;
 
             }else{
@@ -90,6 +90,7 @@ int main(){
     if (credits<1){
 
         std::cout<<"Credits: "<<credits<<"\n\nUh oh, Brokie! eheheh";
+        std::cout<<"Final Credits: "<<credits<<"\n Your stats:\n"<<dye::red("0 Matches: ")<<nothing<<dye::yellow("   2 Match: ")<<match2<<dye::green("   3 Match: ")<<match3<<"\n";
 
     }
 
